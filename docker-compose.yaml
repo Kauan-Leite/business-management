@@ -1,28 +1,53 @@
 version: '3'
 services:
+
   frontend:
     build: ./frontend
     container_name: bm_front
     command: npm start
+    restart: always
     ports:
       - 3000:3000
     volumes:
       - ./frontend:/usr/app
+    networks:
+      - business_management_net
     depends_on:
       - backend
+
+
   backend:
     build: ./backend
     container_name: bm_back
+    restart: always
     ports:
       - 3001:3001
     volumes:
       - ./backend:/usr/app
+    environment:
+        NODE_ENV: development
+    networks:
+      - business_management_net
     depends_on:
-      - database
+      database:
+        condition: service_healthy
+
+
   database:
     container_name: bm_db
-    image: mysql:8.0.29
+    restart: always
+    image: mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 10s
+      retries: 5
     ports:
       - 3006:3006
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: osten_moove
+    networks:
+      - business_management_net
+  
+networks:
+  business_management_net:
+    driver: bridge
