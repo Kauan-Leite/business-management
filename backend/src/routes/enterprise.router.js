@@ -8,4 +8,9 @@ router.get(
   enterpriseController.getAll,
 );
 
+router.get(
+  '/empresas/:id',
+  enterpriseController.getById,
+);
+
 module.exports = router;

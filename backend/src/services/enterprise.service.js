@@ -8,6 +8,15 @@ const getAll = async () => {
   return empresas;
 };
 
+const getById = async (id) => {
+  const empresa = await Enterprise.findByPk(id, {
+    include: { model: Address, as: 'address', attributes: ['street', 'number', 'district', 'city', 'state'] },
+  });
+
+  return empresa;
+}
+
 module.exports = {
   getAll,
+  getById,
 }
