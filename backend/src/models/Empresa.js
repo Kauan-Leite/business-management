@@ -12,13 +12,13 @@ const EmpresaModel = (sequelize, DataTypes) => {
     },
   }, {
     timestamps: false,
-    tableName: 'Empresa',
+    tableName: 'empresas',
     underscored: true,
   });
 
   Empresa.associate = (models) => {
     Empresa.hasOne(models.Endereco,
-      { foreignKey: 'id', as: 'endereco'})
+      { foreignKey: 'id', as: 'enderecos'})
   }
 
   return Empresa;

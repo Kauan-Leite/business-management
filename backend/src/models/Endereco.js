@@ -12,12 +12,16 @@ const EnderecoModel = (sequelize, DataTypes) => {
     estado: DataTypes.STRING
   }, {
     timestamps: false,
-    tableName: 'endereco',
+    tableName: 'enderecos',
     underscored: true
   });
 
   Endereco.associate = (models) => {
     Endereco.belongsTo(models.Empresa,
       { foreignKey: 'empresaId', as: 'empresas'})
-  }
-}
+  };
+
+  return Endereco;
+};
+
+module.exports = EnderecoModel;
