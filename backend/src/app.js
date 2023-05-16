@@ -1,12 +1,9 @@
-// src/app.js
 const express = require('express');
-
-const empresa = require('./controllers/empresa.controller');
+const { enterpriseRouter } = require('./routes');
 
 const app = express();
 
 app.use(express.json());
-
-app.get('/empresas', empresa.getAll);
+app.use('/', enterpriseRouter);
 
 module.exports = app;
