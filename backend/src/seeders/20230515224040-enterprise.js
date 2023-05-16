@@ -1,15 +1,15 @@
-'use strict';
+"use strict";
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert('enterprise', [
+    await queryInterface.bulkInsert("enterprise", [
       {
-        nome: 'Osten Moove',
+        nome: "Osten Moove",
       },
     ]);
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('enterprise', null, {})
-  }
+    await queryInterface.bulkDelete("enterprise", null, {});
+  },
 };

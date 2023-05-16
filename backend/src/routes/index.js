@@ -1,5 +1,5 @@
-const enterpriseRouter = require('./enterprise.router');
+const enterpriseRouter = require("./enterprise.router");
 
 module.exports = {
-  enterpriseRouter
+  enterpriseRouter,
 };

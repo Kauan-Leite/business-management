@@ -1,19 +1,25 @@
 const EnterpriseModel = (sequelize, DataTypes) => {
-  const Enterprise = sequelize.define('Enterprise', {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true,
+  const Enterprise = sequelize.define(
+    "Enterprise",
+    {
+      id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+      },
+      nome: DataTypes.STRING,
     },
-    nome: DataTypes.STRING,
-  }, {
-    timestamps: false,
-    tableName: 'enterprise',
-  });
+    {
+      timestamps: false,
+      tableName: "enterprise",
+    }
+  );
 
   Enterprise.associate = (models) => {
-    Enterprise.hasOne(models.Address, 
-      { foreignKey: 'enterpriseId', as: 'address' });
+    Enterprise.hasOne(models.Address, {
+      foreignKey: "enterpriseId",
+      as: "address",
+    });
   };
 
   return Enterprise;
