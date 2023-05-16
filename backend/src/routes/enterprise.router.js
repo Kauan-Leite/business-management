@@ -13,4 +13,9 @@ router.get(
   enterpriseController.getById,
 );
 
+router.post(
+  '/empresas',
+  enterpriseController.create,
+);
+
 module.exports = router;

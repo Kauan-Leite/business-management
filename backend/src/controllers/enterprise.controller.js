@@ -26,7 +26,19 @@ const getById = async (req, res) => {
   }
 }
 
+const create = async (req, res) => {
+  const { name, street, number, district, city, state } = req.body;
+  try {
+    const data = await enterpriseService.create({ name }, { street, number, district, city, state });
+    res.status(201).json(data);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error)
+  }
+} 
+
 module.exports = {
   getAll,
   getById,
+  create,
 }
