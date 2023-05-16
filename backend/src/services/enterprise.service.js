@@ -36,7 +36,6 @@ const create = async (enterpiseInfos, addressInfos) => {
 }
 
 const update = async (enterpiseInfos, addressInfos) => {
-  console.log(typeof(enterpiseInfos.id));
   await Enterprise.update({ nome: enterpiseInfos.name }, {
     where: {
       id: enterpiseInfos.id,
@@ -62,9 +61,18 @@ const update = async (enterpiseInfos, addressInfos) => {
   return empresa;
 }
 
+const remove = async (id) => {
+  return await Enterprise.destroy({
+    where: {
+      id,
+    },
+  });
+};
+
 module.exports = {
   getAll,
   getById,
   create,
   update,
+  remove,
 }
