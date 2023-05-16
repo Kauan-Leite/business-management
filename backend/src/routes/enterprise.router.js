@@ -18,4 +18,9 @@ router.post(
   enterpriseController.create,
 );
 
+router.put(
+  '/empresas/:id',
+  enterpriseController.update,
+);
+
 module.exports = router;

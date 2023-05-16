@@ -35,10 +35,23 @@ const create = async (req, res) => {
     console.log(error);
     res.status(500).json(error)
   }
-} 
+} ;
+
+const update = async (req, res) => {
+  const { id } = req.params;
+  const { name, street, number, district, city, state } = req.body;
+  try {
+    const data = await enterpriseService.update({ id: Number(id), name }, { street, number, district, city, state });
+    res.status(201).json(data);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error)
+  }
+}
 
 module.exports = {
   getAll,
   getById,
   create,
+  update,
 }
