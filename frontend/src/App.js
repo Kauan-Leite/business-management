@@ -3,13 +3,16 @@ import { connect } from 'react-redux';
 import { getAllEnterprises } from './redux/actions';
 import { useState } from 'react';
 import Table from './components/Table';
+import MyModal from './components/MyModal';
 
 function App(props) {
-  const { dispatch } = props;
+  const { dispatch, enterprises } = props;
 
   useState(() => {
     dispatch(getAllEnterprises())
   }, [])
+
+
 
   return (
     <div className="App">
@@ -17,15 +20,16 @@ function App(props) {
         <h1>Business Management</h1>
       </nav>
 
-      <Table />
+      <MyModal type='add' />
+      { 
+        enterprises.length > 0 ? <Table /> : <div className='no-enterprises'><h1>Nenhuma Empresa Cadastrada</h1></div>
+      }
     </div>
   );
 }
 
 const mapStateToProps = (state) => ({
-  products: state.products,
-  isFetching: state.isFetching,
-  offset: state.offset
+  enterprises: state.enterprises,
 })
 
 

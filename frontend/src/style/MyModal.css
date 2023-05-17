@@ -1,0 +1,176 @@
+.btn-add, .btn-more, .btn-edit,
+.btn-remove, .cadastrar, .atualizar,
+.confirm-delete {
+  border-radius: 4px;
+  padding: 8px;
+  font-weight: 800;
+  transition: 0.75s;
+}
+
+.btn-add {
+  border-radius: 16px;
+  background-color: green;
+  color: white;
+  border: 2px solid green;
+  margin-top: 10px;
+  margin-left: 1.5%;
+  padding: 14px;
+}
+
+.btn-add:hover {
+  color: green;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn-more {
+  background-color: blue;
+  color: white;
+  border: 2px solid blue;
+}
+
+.btn-more:hover {
+  color: blue;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn-edit {
+  background-color: rgb(6, 116, 116);
+  color: white;
+  border: 2px solid rgb(6, 116, 116);
+}
+
+.btn-edit:hover {
+  color: rgb(6, 116, 116);
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn-remove, .confirm-delete {
+  background-color: red;
+  color: white;
+  border: 2px solid red;
+}
+
+.btn-remove:hover, .confirm-delete:hover {
+  color: red;
+  background-color: white;
+  cursor: pointer;
+}
+
+.close-modal {
+  border: none;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 20px;
+  font-weight: 900;
+  font-size: 28px;
+  transition: 0.75s;
+  top: 1%;
+  right: 3%;
+  position: absolute;
+}
+
+.close-modal:hover {
+  cursor: pointer;
+}
+
+.cadastrar {
+  border: 2px solid green;
+  background-color: green;
+  color: white;
+  width: 95%;
+  bottom: 40px;
+  position: fixed;
+}
+
+.atualizar {
+  border: 2px solid rgb(6, 116, 116);
+  background-color: rgb(6, 116, 116);
+  color: white;
+  width: 95%;
+  bottom: 40px;
+  position: fixed;
+}
+
+.cadastrar:hover {
+  cursor: pointer;
+  background-color: white;
+  color: green;
+}
+
+.atualizar:hover {
+  cursor: pointer;
+  background-color: white;
+  color: rgb(6, 116, 116);
+}
+
+.cadastrar:disabled, .atualizar:disabled {
+  cursor: default;
+  background-color: gray;
+  color: white;
+  border: 2px solid gray;
+}
+
+.inp-name, .inp-district {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.inp-street, .inp-city {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.inp-number, .inp-state {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.street-num, .city-state {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.street-span {
+  width: 90%;
+  margin-right: 10px;
+}
+
+.num-span {
+  width: 20%;
+  margin-left: 20px;
+}
+
+.city-span {
+  width: 50%;
+  margin-right: 10px;
+}
+
+.state-span {
+  width: 50%;
+  margin-left: 20px;
+}
+
+label {
+  margin-top: 40px;
+  display: inline-block;
+}
+
+h3 {
+  margin-top: 30px;
+}
+
+.confirm-delete {
+  width: 90%;
+  bottom: 40px;
+  position: fixed;
+}

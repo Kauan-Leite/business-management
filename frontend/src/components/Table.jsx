@@ -1,5 +1,7 @@
 import { connect } from 'react-redux';
 import '../style/Table.css'
+import MyModal from './MyModal';
+
 
 function Table(props) {
   const { enterprises } = props;
@@ -16,13 +18,13 @@ function Table(props) {
         <p>{`${enterprise.address.street} ${enterprise.address.number}, ${enterprise.address.district}, ${enterprise.address.city} - ${enterprise.address.state}`}</p>
       </td>
       <td className='more'>
-        <button>Mais Detalhes</button>
+        <MyModal type='more' enterprise={ enterprise } />
       </td>
       <td className='editar'>
-        <button>Editar</button>
+        <MyModal type='edit' enterprise={ enterprise } />
       </td>
       <td className='remove'>
-        <button>Excluir</button>
+        <MyModal type='remove' enterprise= { enterprise } />
       </td>
     </tr>
   ));
@@ -48,7 +50,6 @@ function Table(props) {
 
 const mapStateToProps = (state) => ({
   enterprises: state.enterprises,
-  isFetching: state.isFetching,
 })
 
 
