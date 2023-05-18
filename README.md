@@ -23,19 +23,17 @@ Para rodar está aplicação localmente é necessário ter <a href="https://git-
 
 ### 1 - Clone o repositório:
 
-```
-git clone git@github.com:Kauan-Leite/business-management.git
-```
+    git clone git@github.com:Kauan-Leite/business-management.git
+
 
 ### 2 - Entre no repositório:
 
-```
-cd business-management
-```
+    cd business-management
 
 ### 3 - No terminal do repositório, rode o comando:
 
     npm run enterprises
+
 
 ### 4- Após os containers estarem em execução basta acessar a aplicação em:
 
@@ -44,6 +42,8 @@ cd business-management
 <br />
 
 ## :satellite: Documentação
+
+Todos os Endpoints desenvolvidos no Back-end.
 
 ### Buscar todas as empresas:
 
