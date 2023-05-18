@@ -1,0 +1,13 @@
+{
+  "name": "business-management",
+  "version": "1.0.0",
+  "description": "## :microscope: Desenvolvimento",
+  "main": "index.js",
+  "scripts": {
+    "front-install": "cd frontend && npm install",
+    "back-install": "cd backend && npm install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
