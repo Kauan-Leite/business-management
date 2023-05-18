@@ -455,7 +455,7 @@ function MyModal(props) {
             </button>
             <Divider />
             <p id="child-modal-description">
-              Tem Certeza que deseja excluir está empresa?
+              Tem Certeza que deseja excluir a empresa {enterprise.nome}?
             </p>
             <button
               className="cancelar"
