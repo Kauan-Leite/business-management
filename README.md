@@ -17,7 +17,7 @@ Nesse projeto foi desenvolvido uma aplicação FullStack de um gerenciamento de 
 
 ⚠️ As portas 3000, 3001 e 3006 devem estar livres em sua máquina. ⚠️
 
-⚠️ Aplicação Desenvolvida e Testada no Ubuntu 22.04.2 LTS. ⚠️
+⚠️ Aplicação Desenvolvida e Testada no Ubuntu 22.04.2 LTS. O Passo a Passo abaixo foi pensado para o Ubuntu, em outros sistemas operacionais podem mudar certos comandos. ⚠️
 
 Para rodar está aplicação localmente é necessário ter <a href="https://git-scm.com/downloads" target="_blank">Git</a>, <a href="https://www.docker.com/" target="_blank">Docker</a>,
 <a href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a>, <a href="https://nodejs.org/en" target="_blank">Node.js</a> e
