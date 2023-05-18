@@ -68,6 +68,14 @@ Todos os Endpoints desenvolvidos no Back-end.
 
 <br />
 
+## 🎲 Banco de Dados
+
+<div align="center">
+ <img src="https://user-images.githubusercontent.com/102389576/239337577-e6a7d849-e31e-4aa7-b38a-987bd47ced31.png" alt="Banco de Dados" />
+</div>
+<br />
+
+
 ## 🧰 Ferramentas e Linguagens
 
 - Docker
