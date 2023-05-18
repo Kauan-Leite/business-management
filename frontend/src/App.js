@@ -8,6 +8,8 @@ import MyModal from './components/MyModal';
 function App(props) {
   const { dispatch, enterprises } = props;
 
+  document.title = 'Gerenciamento de Empresas'
+
   useState(() => {
     dispatch(getAllEnterprises())
   }, [])
@@ -17,7 +19,7 @@ function App(props) {
   return (
     <div className="App">
       <nav>
-        <h1>Business Management</h1>
+        <h1>Gerenciamento de Empresas</h1>
       </nav>
 
       <MyModal type='add' />

@@ -1,4 +1,4 @@
-import { Modal, Box, Button, Divider } from '@mui/material';
+import { Modal, Box, Divider } from '@mui/material';
 import { useState } from 'react';
 import { getEnterprisesById, updateEnterprise, deleteEnterprise, createEnterprise } from '../redux/actions';
 import { connect } from 'react-redux';
@@ -95,8 +95,6 @@ function MyModal(props) {
 
   const changeEdit = ({target}) => {
     const { name, value } = target
-    console.log(name);
-    console.log(value);
     setEditItem(prevState => ({
       ...prevState,
       [name]: value,
@@ -145,33 +143,33 @@ function MyModal(props) {
           aria-labelledby="child-modal-title"
           aria-describedby="child-modal-description"
         >
-          <Box sx={{ ...style, width: '50%', height: '60%' }}>
+          <Box sx={{ ...style, minWidth: '50%', maxWidth:'70%', minHeight: '60%' }}>
             <h2 id="child-modal-title">Adicionar Empresa</h2>
             <Divider />
             <button className='close-modal' onClick={() => handleClose(setOpenAdd)}>X</button>
             <div id="child-modal-description">
               <label>Nome da Empresa: </label>
-              <input className='inp-name' type='text' name='name' value={newItem.name} onChange={ changeNew } />
+              <input className='inp-name' type='text' name='name' value={newItem.name} onChange={ changeNew } placeholder='Osten Group' />
               <div className='street-num'>
                 <span className='street-span'>
                   <label>Rua/Avenida: </label>
-                  <input className='inp-street' type='text' name='street' value={newItem.street} onChange={ changeNew } />
+                  <input className='inp-street' type='text' name='street' value={newItem.street} onChange={ changeNew } placeholder='Av. Airton Pretini' />
                 </span>
                 <span className='num-span'>
                   <label>N°: </label>
-                  <input className='inp-number' type='number' name='number' value={newItem.number} onChange={ changeNew } />
+                  <input className='inp-number' type='number' name='number' value={newItem.number} onChange={ changeNew } placeholder='10'/>
                 </span>
               </div>
               <label>Bairro: </label>
-              <input className='inp-district' type='text' name='district' value={newItem.district} onChange={ changeNew } />
+              <input className='inp-district' type='text' name='district' value={newItem.district} onChange={ changeNew } placeholder='Penha de França' />
               <div className='city-state'>
                 <span className='city-span'>
                   <label>Cidade: </label>
-                  <input className='inp-city' type='text' name='city' value={newItem.city} onChange={ changeNew } />
+                  <input className='inp-city' type='text' name='city' value={newItem.city} onChange={ changeNew } placeholder='São Paulo' />
                 </span>
                 <span className='state-span'>
                   <label>Estado: </label>
-                  <input className='inp-state' type='text' name='state' value={newItem.state} onChange={ changeNew } />
+                  <input className='inp-state' type='text' name='state' value={newItem.state} onChange={ changeNew } placeholder='São Paulo' />
                 </span>
               </div>
             </div>
@@ -192,19 +190,18 @@ function MyModal(props) {
           aria-labelledby="child-modal-title"
           aria-describedby="child-modal-description"
         >
-          <Box sx={{ ...style, width: '50%', height: '65%' }}>
+          <Box sx={{ ...style, minWidth: '10%', maxWidth: '70%', minHeight: '50%' }}>
             <h2 id="child-modal-title">Mais Detalhes</h2>
             <Divider />
             <button className='close-modal' onClick={() => handleClose(setOpenMore)}>X</button>
             <div id="child-modal-description">
-              <h3>ID: {enterpriseByID.id}</h3>
-              <h3>Nome da Empresa: {enterpriseByID.nome}</h3>
-              <h3>Endereço</h3>
-              <h3>Rua/Av.: {enterpriseByID.address.street}</h3>
-              <h3>N°: {enterpriseByID.address.number}</h3>
-              <h3>Bairro: {enterpriseByID.address.district}</h3>
-              <h3>Cidade: {enterpriseByID.address.city}</h3>
-              <h3>Estado: {enterpriseByID.address.state}</h3>
+              <h3>ID: <span className='dados'>{enterpriseByID.id}</span></h3>
+              <h3>Nome da Empresa: <span className='dados'>{enterpriseByID.nome}</span></h3>
+              <h3>Rua/Avenida: <span className='dados'>{enterpriseByID.address.street}</span></h3>
+              <h3>N°: <span className='dados'>{enterpriseByID.address.number}</span></h3>
+              <h3>Bairro: <span className='dados'>{enterpriseByID.address.district}</span></h3>
+              <h3>Cidade: <span className='dados'>{enterpriseByID.address.city}</span></h3>
+              <h3>Estado: <span className='dados'>{enterpriseByID.address.state}</span></h3>
             </div>
           </Box>
         </Modal>
@@ -222,7 +219,7 @@ function MyModal(props) {
           aria-labelledby="child-modal-title"
           aria-describedby="child-modal-description"
         >
-          <Box sx={{ ...style, width: '50%', height: '65%' }}>
+          <Box sx={{ ...style, minWidth: '50%', maxWidth:'70%', minHeight: '65%' }}>
             <h2 id="child-modal-title">Editar Empresa</h2>
             <Divider />
             <button className='close-modal' onClick={() => handleClose(setOpenEdit)}>X</button>
@@ -270,12 +267,14 @@ function MyModal(props) {
           aria-labelledby="child-modal-title"
           aria-describedby="child-modal-description"
         >
-          <Box sx={{ ...style, width: '25vw', height: '20vh' }}>
+          <Box sx={{ ...style, minWidth: '25vw', maxWidth:'70%', minHeight: '20vh' }}>
             <h2 id="child-modal-title">Excluir</h2>
+            <button className='close-modal' onClick={() => handleClose(setOpenExcluir)}>X</button>
             <Divider />
             <p id="child-modal-description">
               Tem Certeza que deseja excluir está empresa?
             </p>
+            <button className='cancelar' onClick={() => handleClose(setOpenExcluir)}>Cancelar</button>
             <button className='confirm-delete' onClick={() => remove(enterprise.id)}>Apagar</button>
           </Box>
         </Modal>

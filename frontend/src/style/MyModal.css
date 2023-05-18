@@ -1,6 +1,6 @@
 .btn-add, .btn-more, .btn-edit,
 .btn-remove, .cadastrar, .atualizar,
-.confirm-delete {
+.confirm-delete, .cancelar {
   border-radius: 4px;
   padding: 8px;
   font-weight: 800;
@@ -8,7 +8,6 @@
 }
 
 .btn-add {
-  border-radius: 16px;
   background-color: green;
   color: white;
   border: 2px solid green;
@@ -24,13 +23,14 @@
 }
 
 .btn-more {
-  background-color: blue;
+  background-color: purple;
   color: white;
-  border: 2px solid blue;
+  border: 2px solid purple;
+  width: 80%;
 }
 
 .btn-more:hover {
-  color: blue;
+  color: purple;
   background-color: white;
   cursor: pointer;
 }
@@ -39,6 +39,7 @@
   background-color: rgb(6, 116, 116);
   color: white;
   border: 2px solid rgb(6, 116, 116);
+  width: 80%;
 }
 
 .btn-edit:hover {
@@ -51,6 +52,10 @@
   background-color: red;
   color: white;
   border: 2px solid red;
+}
+
+.btn-remove {
+  width: 80%;
 }
 
 .btn-remove:hover, .confirm-delete:hover {
@@ -80,18 +85,16 @@
   border: 2px solid green;
   background-color: green;
   color: white;
-  width: 95%;
-  bottom: 40px;
-  position: fixed;
+  margin-left: 2px;
+  margin-top: 40px;
 }
 
 .atualizar {
   border: 2px solid rgb(6, 116, 116);
   background-color: rgb(6, 116, 116);
   color: white;
-  width: 95%;
-  bottom: 40px;
-  position: fixed;
+  margin-left: 2px;
+  margin-top: 40px;
 }
 
 .cadastrar:hover {
@@ -169,8 +172,24 @@ h3 {
   margin-top: 30px;
 }
 
+.dados {
+  font-weight: 400;
+}
+
 .confirm-delete {
-  width: 90%;
-  bottom: 40px;
-  position: fixed;
+  float: right;
+  margin-top: 20px;
+}
+
+.cancelar {
+  background-color: gray;
+  color: white;
+  border: 2px solid gray;
+  margin-top: 20px;
+}
+
+.cancelar:hover {
+  color: gray;
+  background-color: white;
+  cursor: pointer;
 }
