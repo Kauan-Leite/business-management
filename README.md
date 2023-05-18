@@ -15,7 +15,11 @@ Nesse projeto foi desenvolvido uma aplicação FullStack de um gerenciamento de 
   
 ## :dna: Instalação e Execução
 
-Para rodar está aplicação localmente é necessário ter **Git**, **Docker**, **Docker Compose** e **Node.js** instalados em seu computador.
+⚠️ As portas 3000, 3001 e 3006 devem estar livres em sua máquina. ⚠️
+
+Para rodar está aplicação localmente é necessário ter <a href="https://git-scm.com/downloads" target="_blank">Git</a>, <a href="https://www.docker.com/" target="_blank">Docker</a>,
+<a href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a>,<a href="https://nodejs.org/en" target="_blank">Node.js</a> e
+<a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" target="_blank">NPM</a> instalados em seu computador.
 
 ### 1 - Clone o repositório:
 
@@ -23,11 +27,17 @@ Para rodar está aplicação localmente é necessário ter **Git**, **Docker**, 
 git clone git@github.com:Kauan-Leite/business-management.git
 ```
 
-### 2 - No terminal do repositório, rode o comando:
+### 2 - Entre no repositório:
 
-    docker-compose up -d
+```
+cd business-management
+```
 
-### 3 - Após os containers estarem em execução basta acessar a aplicação em:
+### 3 - No terminal do repositório, rode o comando:
+
+    npm run enterprises
+
+### 4- Após os containers estarem em execução basta acessar a aplicação em:
 
     http://localhost:3000/
 
