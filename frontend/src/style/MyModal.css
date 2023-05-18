@@ -58,6 +58,11 @@
   width: 80%;
 }
 
+.confirm-delete {
+  float: right;
+  margin-top: 20px;
+}
+
 .btn-remove:hover, .confirm-delete:hover {
   color: red;
   background-color: white;
@@ -81,13 +86,6 @@
   cursor: pointer;
 }
 
-.cadastrar {
-  border: 2px solid green;
-  background-color: green;
-  color: white;
-  margin-left: 2px;
-  margin-top: 40px;
-}
 
 .atualizar {
   border: 2px solid rgb(6, 116, 116);
@@ -97,11 +95,7 @@
   margin-top: 40px;
 }
 
-.cadastrar:hover {
-  cursor: pointer;
-  background-color: white;
-  color: green;
-}
+
 
 .atualizar:hover {
   cursor: pointer;
@@ -115,6 +109,21 @@
   color: white;
   border: 2px solid gray;
 }
+
+.cadastrar {
+  border: 2px solid green;
+  background-color: green;
+  color: white;
+  margin-left: 2px;
+  margin-top: 40px;
+}
+
+.cadastrar:hover {
+  cursor: pointer;
+  background-color: white;
+  color: green;
+}
+
 
 .inp-name, .inp-district {
   padding: 8px;
@@ -174,11 +183,6 @@ h3 {
 
 .dados {
   font-weight: 400;
-}
-
-.confirm-delete {
-  float: right;
-  margin-top: 20px;
 }
 
 .cancelar {

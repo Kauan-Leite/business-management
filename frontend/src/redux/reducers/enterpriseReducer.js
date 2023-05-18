@@ -2,15 +2,15 @@ const INITIAL_STATE = {
   enterprises: [],
   isFetching: true,
   enterpriseByID: {
-    id: '',
-    nome: '',
+    id: "",
+    nome: "",
     address: {
-      street: '',
-      number: '',
-      district: '',
-      city: '',
-      state: '',
-    }
+      street: "",
+      number: "",
+      district: "",
+      city: "",
+      state: "",
+    },
   },
 };
 
@@ -29,13 +29,13 @@ const enterpriseReducer = (state = INITIAL_STATE, action) => {
         ...state,
         isFetching: false,
         enterpriseByID: action.payload,
-      }
+      };
     case "REQUEST_SUCCESSFUL_EDIT":
-        return {
-          ...state,
-          isFetching: false,
-          editItem: action.payload,
-        }
+      return {
+        ...state,
+        isFetching: false,
+        editItem: action.payload,
+      };
     case "REQUEST_FAILED":
       return {
         ...state,
