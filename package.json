@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "front-install": "cd frontend && npm install",
-    "back-install": "cd backend && npm install"
+    "back-install": "cd backend && npm install",
+    "enterprises": "npm run front-install && npm run back-install && docker-compose down && docker-compose up -d"
   },
   "keywords": [],
   "author": "",
