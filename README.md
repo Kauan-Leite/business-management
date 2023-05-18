@@ -18,7 +18,7 @@ Nesse projeto foi desenvolvido uma aplicação FullStack de um gerenciamento de 
 ⚠️ As portas 3000, 3001 e 3006 devem estar livres em sua máquina. ⚠️
 
 Para rodar está aplicação localmente é necessário ter <a href="https://git-scm.com/downloads" target="_blank">Git</a>, <a href="https://www.docker.com/" target="_blank">Docker</a>,
-<a href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a>,<a href="https://nodejs.org/en" target="_blank">Node.js</a> e
+<a href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a>, <a href="https://nodejs.org/en" target="_blank">Node.js</a> e
 <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" target="_blank">NPM</a> instalados em seu computador.
 
 ### 1 - Clone o repositório:
