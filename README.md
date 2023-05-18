@@ -23,7 +23,7 @@ Para rodar está aplicação localmente é necessário ter <a href="https://git-
 
 ### 1 - Clone o repositório:
 
-    git clone git@github.com:Kauan-Leite/business-management.git
+    git clone https://github.com/Kauan-Leite/business-management.git
 
 
 ### 2 - Entre no repositório:
