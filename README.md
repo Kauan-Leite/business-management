@@ -6,8 +6,8 @@ Projeto desenvolvido durante o Desafio Técnico da <a href="https://www.ostenmoo
 
 Nesse projeto foi desenvolvido uma aplicação FullStack de um gerenciamento de empresas, onde suas funcionalidades são:
   * Tabela com todas as empresas no Banco de Dados;
-  * Visualizar de todos os dados de uma empresa;
-  * Adicionar uma nova empresa no Banco de Dados;
+  * Visualizar todos os dados de uma empresa;
+  * Criar uma nova empresa;
   * Editar dados de uma empresa;
   * Excluir uma empresa;
 
@@ -84,7 +84,9 @@ git clone git@github.com:Kauan-Leite/business-management.git
 ## :camera: Imagens
 
 <div align="center">
- <img src="" alt="" width="800px""/><br />
- <img src="" alt="" width="800px"/><br />
- <img src="" alt="" width="800px"/>
+ <img src="https://user-images.githubusercontent.com/102389576/239121990-0667341d-f5c6-406f-a744-b5313898049a.png" alt="Tabela de Empresas" width="800px"/><br />
+ <img src="https://user-images.githubusercontent.com/102389576/239121962-a7bc2b54-66c0-459c-9dad-826b1604230c.png" alt="Adicionar Empresa" width="800px"/><br />
+ <img src="https://user-images.githubusercontent.com/102389576/239121998-68c809f0-287f-40be-8c3f-e037c206b12f.png" alt="Detalhes da Empresa" width="800px"/><br />
+ <img src="https://user-images.githubusercontent.com/102389576/239121980-db983009-4b90-46e2-b120-4a6a8a95e282.png" alt="Editar Empresa" width="800px"/><br />
+ <img src="https://user-images.githubusercontent.com/102389576/239121973-f1161247-e071-42df-9046-ebc92ca06922.png" alt="Excluir Empresa" width="800px"/>
 </div>
