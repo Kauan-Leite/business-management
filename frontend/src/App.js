@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { connect } from "react-redux";
+import { getAllEnterprises } from "./redux/actions";
+import { useState } from "react";
+import Table from "./components/Table";
+import MyModal from "./components/MyModal";
 
-function App() {
+function App(props) {
+  const { dispatch, enterprises } = props;
+
+  document.title = "Gerenciamento de Empresas";
+
+  useState(() => {
+    dispatch(getAllEnterprises());
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav>
+        <h1>Gerenciamento de Empresas</h1>
+      </nav>
+
+      <MyModal type="add" />
+      {enterprises.length > 0 ? (
+        <Table />
+      ) : (
+        <div className="no-enterprises">
+          <h1>Nenhuma Empresa Cadastrada</h1>
+        </div>
+      )}
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  enterprises: state.enterprises,
+});
+
+export default connect(mapStateToProps)(App);
